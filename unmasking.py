@@ -3,7 +3,7 @@
 from collections import Counter
 import random
 
-CHUNK_LENGTH = 500
+CHUNK_LENGTH = 50 #500
 INITIAL_FEATURE_SET_LENGTH = 250
 
 def text_to_list(text):
@@ -15,8 +15,11 @@ def text_to_list(text):
                  if x != '']
                  
 def select_chunks(text1,text2):
-    """Reduce the number of chunks of the text with more chunks such that
-       we have the same number of chunks for both texts"""
+    """
+    Reduce the number of chunks of the text with more chunks such that
+    we have the same number of chunks for both texts, i.e. randomly delete
+    chunks from the text with more chunks
+    """
     random.seed()
     text1.selected_chunks = text1.chunks
     text2.selected_chunks = text2.chunks
@@ -24,6 +27,12 @@ def select_chunks(text1,text2):
         text1.selected_chunks.remove(random.choice(text1.selected_chunks))
     while len(text2.selected_chunks) > len(text1.selected_chunks):
         text2.selected_chunks.remove(random.choice(text2.selected_chunks))
+
+def curve_score(curve):
+     """Calculate a score for a curve by which they are sorted"""
+     # this should be optimized
+     #curve_normalized = [x/curve[0] for x in curve]
+     return sum(curve)
 
 class Database:
     """represents a database with texts of known authors"""
@@ -87,6 +96,10 @@ class Text:
         
         
     def create_chunks(self):
+        """
+        Create chunks of length CHUNK_LENGTH from the raw text. There might be
+        intersections between the ultimate and penultimate chunks.
+        """
         global CHUNK_LENGTH
         
         self.tokens = text_to_list(self.raw)
