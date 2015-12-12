@@ -12,7 +12,7 @@ The `tira` function of `main.py` executes the algorithm, have a look at the comm
 * `NUMBER_ELIMINATE_FEATURES` determines the number of features to be eliminated from each extreme (max/min +/-) 
 * `NUMBER_ITERATIONS` to determines the number of iterations to be made. 
  
- `unmasking.py`
+`unmasking.py`
  
  * `CHUNK_LENGTH` determines how long each chunk will be
  * `INITIAL_FEATURE_SET_LENGTH` determines how many words will be considered in the initial feature set 
