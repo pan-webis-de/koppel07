@@ -7,7 +7,7 @@ def main():
     truthfile = open(os.path.join(corpusdir, "ground-truth.json"))
     truthjson = json.load(truthfile)
     
-    outfile = open(os.path.join(corpusdir, "koppel07_3e_10i.json"))
+    outfile = open(os.path.join(corpusdir, "koppel07_new_sum_3e_10i.json"))
     outjson = json.load(outfile)
     
     ground_truth = {truth["unknown-text"]:truth["true-author"] for truth in truthjson["ground-truth"]}
