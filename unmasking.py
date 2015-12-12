@@ -3,7 +3,7 @@
 from collections import Counter
 import random
 
-CHUNK_LENGTH = 50 #500
+CHUNK_LENGTH = 500
 INITIAL_FEATURE_SET_LENGTH = 250
 
 def text_to_list(text):
@@ -31,7 +31,6 @@ def select_chunks(text1,text2):
 def curve_score(curve):
      """Calculate a score for a curve by which they are sorted"""
      # this should be optimized
-     #curve_normalized = [x/curve[0] for x in curve]
      return sum(curve)
 
 class Database:
