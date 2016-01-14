@@ -1,8 +1,10 @@
 ## koppel07 - An Approach to Authorship Attribution
 
-This is a reimplmentation of the approach to authorship attribution originally described in
+This is a reimplmentation of the approach to authorship verification originally described in
 
 > M. Koppel, J. Schler, and E. Bonchek-Dokow. [Measuring differentiability: Unmasking pseudonymous authors](http://u.cs.biu.ac.il/~koppel/papers/authorship-jmlr-final.pdf). Journal of Machine Learning Research, 8, 1261-1276, 2007 [[paper](http://u.cs.biu.ac.il/~koppel/papers/authorship-jmlr-final.pdf)]
+
+which was adapted to the task of authorship attribution.
 
 It was reimplemented as part of a science reproducibility study alongside [14 other authorship attribution approaches](https://github.com/search?q="Who+wrote+the+web"+user:pan-webis-de). The results of the reproducibility study can be found in
 
