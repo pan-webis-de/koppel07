@@ -40,17 +40,6 @@ The software accepts as input a path to an inflated dataset's `TOP_DIRECTORY` an
 
 where `unknown_text` is the name of an unknown text as per `meta-file.json`, `author` is the name of a candidate author as per `meta-file.json`, and `score` is as real value in the range [0,1] which indicates the software's confidence in its attribution (0 means completely uncertain, 1 means completely sure).
 
-In case the dataset comprises texts of unknown authorship that have not been authored by any of the candidate authors (i.e., open-set authorship attribution), the software may declare that none of the available candidate authors is the author of a given text of unknown authorship by setting `author` to `candidate00000`. For example:
-
-```json
-{
-"answers": [
-	{"unknown_text": "unknown00001.txt", "author": "candidate00001", "score": 0.8},
-	{"unknown_text": "unknown00002.txt", "author": "candidate00000", "score": 0.9}
-	]
-}
-```
-
 ## License
 
 Copyright (c) 2015 Robert Passmann
