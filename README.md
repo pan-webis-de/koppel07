@@ -16,7 +16,7 @@ If you use this reimplementation in your own research, please make sure to cite 
 
 To execute the software, install it and make sure all its dependencies are installed as well; then run the software using the following command:
 
-`python main.py -i <path-to-input-data> -o <output-path>`
+`python koppel07.py -i <path-to-input-data> -o <output-path>`
 
 ## Input and Output Formats
 
