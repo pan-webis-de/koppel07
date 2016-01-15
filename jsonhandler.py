@@ -55,9 +55,10 @@ jsonhandler.storeJson(unknowns, authors, scores)
 
 import os
 import json
+import codecs
 
 META_FNAME = "meta-file.json"
-OUT_FNAME = "koppel07.json"
+OUT_FNAME = "answers.json"
 GT_FNAME = "ground-truth.json"
 
 
@@ -99,7 +100,7 @@ def loadTraining():
 
 
 def getTrainingText(cand, fname):
-    dfile = open(os.path.join(corpusdir, cand, fname))
+    dfile = codecs.open(os.path.join(corpusdir, cand, fname), "r", "utf-8")
     s = dfile.read()
     dfile.close()
     return s
