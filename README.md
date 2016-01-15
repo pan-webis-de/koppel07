@@ -2,7 +2,7 @@
 
 This is a reimplementation of the approach to authorship verification originally described in
 
-> M. Koppel, J. Schler, and E. Bonchek-Dokow. [Measuring differentiability: Unmasking pseudonymous authors](http://u.cs.biu.ac.il/~koppel/papers/authorship-jmlr-final.pdf). Journal of Machine Learning Research, 8, 1261-1276, 2007 [[paper](http://u.cs.biu.ac.il/~koppel/papers/authorship-jmlr-final.pdf)]
+> Moshe Koppel, Jonathan Schler, and Elisheva Bonchek-Dokow. [Measuring differentiability: Unmasking pseudonymous authors](http://u.cs.biu.ac.il/~koppel/papers/authorship-jmlr-final.pdf). Journal of Machine Learning Research, 8, 1261-1276, 2007 [[paper](http://u.cs.biu.ac.il/~koppel/papers/authorship-jmlr-final.pdf)]
 
 which was adapted to the task of authorship attribution.
 
