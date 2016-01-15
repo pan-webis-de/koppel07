@@ -11,7 +11,6 @@ INITIAL_FEATURE_SET_LENGTH = 250
 import logging
 import argparse
 import jsonhandler
-import unmasking 
 import sys
 from sklearn import svm
 import numpy
