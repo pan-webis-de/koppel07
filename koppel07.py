@@ -132,13 +132,13 @@ def tira(corpusdir, outputdir):
     jsonhandler.loadJson(corpusdir)
     jsonhandler.loadTraining()
     
-    database = unmasking.Database()
+    database = Database()
     
     for candidate in jsonhandler.candidates:
         database.add_author(candidate)
         for training in jsonhandler.trainings[candidate]:
             logging.info("Reading training text '%s' of '%s'", training, candidate)
-            text = unmasking.Text(jsonhandler.getTrainingText(candidate,training), 
+            text = Text(jsonhandler.getTrainingText(candidate,training), 
                                   candidate + " " + training)
             try: 
                 text.create_chunks()
@@ -162,7 +162,7 @@ def tira(corpusdir, outputdir):
         
             # load the unknown text and create the chunks which are used
             # for the unmasking process
-            unknown_text = unmasking.Text(jsonhandler.getUnknownText(unknown),unknown)
+            unknown_text = Text(jsonhandler.getUnknownText(unknown),unknown)
             unknown_text.create_chunks()
         
             for candidate in jsonhandler.candidates:
@@ -173,7 +173,7 @@ def tira(corpusdir, outputdir):
                     features = list(database.initial_feature_set)
                 
                     # randomly select equally many chunks from each text
-                    unmasking.select_chunks(unknown_text, known_text)
+                    select_chunks(unknown_text, known_text)
                 
                     # create label vector 
                     # (0 -> chunks of unknown texts, 1 -> chunks of known texts)
@@ -192,7 +192,7 @@ def tira(corpusdir, outputdir):
                                      str(i+1), unknown, known_text.name)  
                         # Create the matrix containing the relative word counts
                         # in each chunk (for the selected features)
-                        matrix = [ [ chunk.count(word)/unmasking.CHUNK_LENGTH 
+                        matrix = [ [ chunk.count(word)/CHUNK_LENGTH 
                                      for word in features ] 
                                    for chunk 
                                    in (unknown_text.selected_chunks + known_text.selected_chunks)]
@@ -231,7 +231,7 @@ def tira(corpusdir, outputdir):
                 
                     # The scores list is now the graph we use to get our results
                     # Therefore, compare with previous scores.
-                    score = unmasking.curve_score(scores)
+                    score = curve_score(scores)
                     logging.info("Calculated a score of %s", str(score))
                     if score < results[candidate]:
                         results[candidate] = score
