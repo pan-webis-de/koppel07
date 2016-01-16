@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # Robert Paßmann
 
-NUMBER_ELIMINATE_FEATURES = 3  # number of features eliminated from each extreme
+# number of features to be eliminated from each extreme (max/min +/-)
+NUMBER_ELIMINATE_FEATURES = 3
 NUMBER_ITERATIONS = 10
 CHUNK_LENGTH = 500
 INITIAL_FEATURE_SET_LENGTH = 250
