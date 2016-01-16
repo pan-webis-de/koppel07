@@ -51,24 +51,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-# Old; remove later
-##Literature
-* Koppel, M., Schler, J., &amp; Bonchek-Dokow, E. (2007). Measuring differentiability: Unmasking pseudonymous authors. Journal of Machine Learning Research, 8, 1261-1276.
-
-##How to use this implementation
-This code was written in `Python 3.4.3`.
-
-The `tira` function of `main.py` executes the algorithm, have a look at the comments over there.
-
-`main.py`
-
-* `NUMBER_ELIMINATE_FEATURES` determines the number of features to be eliminated from each extreme (max/min +/-) 
-* `NUMBER_ITERATIONS` to determines the number of iterations to be made. 
- 
-`unmasking.py`
- 
- * `CHUNK_LENGTH` determines how long each chunk will be
- * `INITIAL_FEATURE_SET_LENGTH` determines how many words will be considered in the initial feature set 
