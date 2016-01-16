@@ -257,7 +257,7 @@ def tira(corpusdir, outputdir):
             candidates.append("FILE_TO_SMALL")
 
     # save everything in the specified directory
-    jsonhandler.storeJson(jsonhandler.unknowns, candidates, outputdir)
+    jsonhandler.storeJson(outputdir, jsonhandler.unknowns, candidates)
 
 
 def main():
